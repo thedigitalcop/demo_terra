@@ -1,6 +1,9 @@
 resource "azurerm_resource_group" "example" {
   name     = "${var.prefix}-resource"
   location = "West Europe"
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
 
@@ -14,4 +17,6 @@ resource "azurerm_storage_account" "example" {
   tags = {
     environment = "staging"
   }
+
 }
+
