@@ -14,9 +14,8 @@ stages:
       inputs:
        terraformVersion: 'latest'
 
-
     - task: TerraformTask@5
-      displayName: 'Terraform Init'
+      displayName: 'terraform init'
       inputs:
         provider: 'azurerm'
         command: 'init'
